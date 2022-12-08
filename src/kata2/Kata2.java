@@ -1,20 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package kata2;
 
+import java.util.Map;
 /**
- *
- * @author Usuario
+ * 
+ * @author Louka David Vanhoucke
  */
 public class Kata2 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        //Version 5
+        
+       String[] data = {"Rosa", "Pepe", "María", "Pepe", "Pepe", "Rosa"};
+
+        Histogram histo = new Histogram(data);
+        
+        Map<String, Integer> histogr = histo.getHistogram();
+        
+        
+        System.out.println("---Mostramos el resultado---");
+        
+        if(!histogr.isEmpty()){
+            for(Map.Entry<String, Integer> entry : histogr.entrySet()) { 
+                System.out.println(entry.getKey() + " ==> " + entry.getValue());
+            }
+        }
     }
-    
 }
